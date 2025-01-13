@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "name": "ბიბლია (Patriarchate)",
+        "language": "Georgian",
+        "language_id": 1
+    },
+    {
+        "id": 2,
+        "name": "King James Version",
+        "language": "English",
+        "language_id": 2
+    },
+    {
+        "id": 3,
+        "name": "Reina-Valera 1909",
+        "language": "Spanish",
+        "language_id": 3
+    },
+    {
+        "id": 4,
+        "name": "Greek Modern",
+        "language": "Greek",
+        "language_id": 4
+    },
+    {
+        "id": 5,
+        "name": "Smith Van Dyke",
+        "language": "Arabic",
+        "language_id": 5
+    },
+    {
+        "id": 6,
+        "name": "NCV Simplified",
+        "language": "Mandarin Chinese",
+        "language_id": 6
+    },
+    {
+        "id": 7,
+        "name": "Indian Revised Version",
+        "language": "Hindi",
+        "language_id": 7
+    },
+    {
+        "id": 8,
+        "name": "Louis Segond 1910",
+        "language": "French",
+        "language_id": 8
+    },
+    {
+        "id": 9,
+        "name": "Biblia Livre",
+        "language": "Portuguese",
+        "language_id": 9
+    },
+    {
+        "id": 10,
+        "name": "Synodal",
+        "language": "Russian",
+        "language_id": 10
+    },
+    {
+        "id": 11,
+        "name": "Riveduta Bible (1927)",
+        "language": "Italian",
+        "language_id": 11
+    },
+    {
+        "id": 12,
+        "name": "Luther (1545)",
+        "language": "German",
+        "language_id": 12
+    },
+    {
+        "id": 13,
+        "name": "Korean bible",
+        "language": "Korean",
+        "language_id": 13
+    },
+    {
+        "id": 14,
+        "name": "Kougo-yaku",
+        "language": "Japanese",
+        "language_id": 14
+    },
+    {
+        "id": 15,
+        "name": "Staten Vertaling",
+        "language": "Dutch",
+        "language_id": 15
+    },
+    {
+        "id": 16,
+        "name": "Pyha Raamattu (1992)",
+        "language": "Finnish",
+        "language_id": 16
+    },
+    {
+        "id": 17,
+        "name": "Danish",
+        "language": "Danish",
+        "language_id": 17
+    },
+    {
+        "id": 18,
+        "name": "Thai KJV",
+        "language": "Thai",
+        "language_id": 18
+    }
+]

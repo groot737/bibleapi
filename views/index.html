@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bible API</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Bible API</h1>
+    <p style="color:white">Explore 18 Bible Versions in 18 Languages via Easy-to-Use API</p>
+  </header>
+  <main>
+    <section>
+      <h2>About the API</h2>
+      <p>Easily integrate 18 Bible versions in multiple languages into your apps. Our API helps developers create multilingual applications with minimal effort, making it simple to provide scripture in diverse languages.</p>
+    </section>
+
+    <section>
+      <h2>API Features</h2>
+      <div class="api-docs">
+        <div class="api-doc-card">
+          <h3>List all Bible versions</h3>
+          <p>Retrieve a list of all available Bible versions from the API.</p>
+        </div>
+        <div class="api-doc-card">
+          <h3>Get all books for a specific Bible version</h3>
+          <p>Retrieve all books for a given Bible version.</p>
+        </div>
+        <div class="api-doc-card">
+          <h3>Get a specific book</h3>
+          <p>Retrieve a specific book from a Bible version.</p>
+        </div>
+        <div class="api-doc-card">
+          <h3>Get a specific page</h3>
+          <p>Retrieve a specific page from a Bible book.</p>
+        </div>
+        <div class="api-doc-card">
+          <h3>Get a specific verse</h3>
+          <p>Retrieve a specific verse from a Bible book and page.</p>
+        </div>
+        <div class="api-doc-card">
+          <h3>Retrieve combined verses</h3>
+          <p>Retrieve a range of combined verses from a specific Bible book and page.</p>
+        </div>
+        <div class="api-doc-card">
+          <h3>Get all supported languages</h3>
+          <p>Retrieve a list of all languages supported by the Bible API.</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>Supported Bible Versions</h2>
+      <ul class="versions-list">
+        <li>
+          <h4>ბიბლია (Patriarchate)</h4>
+          <p>Language: Georgian🇬🇪</p>
+        </li>
+        <li>
+          <h4>King James Version</h4>
+          <p>Language: English🇬🇧</p>
+        </li>
+        <li>
+          <h4>Reina-Valera 1909</h4>
+          <p>Language: Spanish🇪🇸</p>
+        </li>
+        <li>
+          <h4>Greek Modern</h4>
+          <p>Language: Greek🇬🇷</p>
+        </li>
+        <li>
+          <h4>Smith Van Dyke</h4>
+          <p>Language: Arabic🇸🇦</p>
+        </li>
+        <!-- Hidden items -->
+        <div class="hidden-versions">
+          <li>
+            <h4>NCV Simplified</h4>
+            <p>Language: Mandarin Chinese🇨🇳</p>
+          </li>
+          <li>
+            <h4>Indian Revised Version</h4>
+            <p>Language: Hindi🇮🇳</p>
+          </li>
+          <li>
+            <h4>Louis Segond 1910</h4>
+            <p>Language: French🇫🇷</p>
+          </li>
+          <li>
+            <h4>Biblia Livre</h4>
+            <p>Language: Portuguese🇵🇹</p>
+          </li>
+          <li>
+            <h4>Synodal</h4>
+            <p>Language: Russian🇷🇺</p>
+          </li>
+          <li>
+            <h4>Riveduta Bible (1927)</h4>
+            <p>Language: Italian🇮🇹</p>
+          </li>
+          <li>
+            <h4>Luther (1545)</h4>
+            <p>Language: German🇩🇪</p>
+          </li>
+          <li>
+            <h4>Korean Bible</h4>
+            <p>Language: Korean🇰🇷</p>
+          </li>
+          <li>
+            <h4>Kougo-yaku</h4>
+            <p>Language: Japanese🇯🇵</p>
+          </li>
+          <li>
+            <h4>Staten Vertaling</h4>
+            <p>Language: Dutch🇳🇱</p>
+          </li>
+          <li>
+            <h4>Pyha Raamattu (1992)</h4>
+            <p>Language: Finnish🇫🇮</p>
+          </li>
+          <li>
+            <h4>Danish</h4>
+            <p>Language: Danish🇩🇰</p>
+          </li>
+          <li>
+            <h4>Thai KJV</h4>
+            <p>Language: Thai🇹🇭</p>
+          </li>
+        </div>
+      </ul>
+      <button id="toggle-button">Show more...</button>
+    </section>    
+    <section>
+      <h2>FAQ</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <button class="faq-question">What is the Bible API?</button>
+          <div class="faq-answer">
+            <p>The Bible API allows developers to easily integrate 18 Bible versions in multiple languages into their applications, enabling access to scripture across diverse languages.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I start using the API?</button>
+          <div class="faq-answer">
+            <p>Visit our <a href="/api-docs" target="_blank" style="color: #457b9d; text-decoration: none;">Swagger Documentation</a> for a detailed guide on API endpoints, request examples, and more.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Is the API free to use?</button>
+          <div class="faq-answer">
+            <p>Yes, the API is fully free.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What languages are supported?</button>
+          <div class="faq-answer">
+            <p>The API supports 18 languages, including English, Spanish, Arabic, Mandarin Chinese, and more. Check the Supported Bible Versions section for a full list.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What formats does the API support?</button>
+          <div class="faq-answer">
+            <p>The API returns data in JSON format, making it easy to parse and use in modern web and mobile applications.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">Who can use the API?</button>
+          <div class="faq-answer">
+            <p>The API is designed for developers building applications that require Bible scriptures, whether for personal projects, church apps, or larger organizational tools.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <section>
+      <h2>Get Started</h2>
+      <p>Visit our <a href="/api-docs" target="_blank" style="text-decoration: none; color: black">Swagger Documentation</a> for detailed API usage, endpoints, and request examples.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p style="color: white;">Made by <a href="https://github.com/groot737">Giorgi</a></p>
+  </footer>
+</body>
+<script src="script.js"></script>
+</html>
