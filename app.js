@@ -5,6 +5,8 @@ const apiRoute = require('./routes/api');
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const page = require('./routes/pages')
+require('dotenv').config();
+
 
 // Swagger definition
 const swaggerDefinition = {
@@ -16,7 +18,7 @@ const swaggerDefinition = {
     },
     servers: [
         {
-            url: 'http://localhost:3000', 
+            url: process.env.SERVER_URL, 
         },
     ],
 };
