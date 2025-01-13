@@ -4,6 +4,7 @@
   "description": "Bible api with 18 translations",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Giorgi",
