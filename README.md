@@ -48,3 +48,8 @@ To get started with the Bible API, clone this repository and install the necessa
 git clone https://github.com/your-username/bible-api.git
 cd bible-api
 npm install
+```
+Add env variable
+```bash
+SERVER_URL = your host name
+```
