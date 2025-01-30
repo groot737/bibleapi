@@ -221,11 +221,77 @@ router.get('/bible/:bibleId/book/:bookId', (req, res) => {
  *     description: Operations related to Bible books, chapters, and verses
  * 
  * paths:
+ *   /api/bible/{bibleId}/{bookId}/allchapters:
+ *     get:
+ *       tags:
+ *         - Bible
+ *       summary: Get all chapters of a specific book in the Bible
+ *       description: Returns an array of all chapter numbers in a book
+ *       parameters:
+ *         - name: bibleId
+ *           in: path
+ *           required: true
+ *           type: string
+ *           description: The ID of the Bible (e.g., "genesis", "matthew", etc.)
+ *         - name: bookId
+ *           in: path
+ *           required: true
+ *           type: integer
+ *           description: The ID of the book in the Bible (starting from 1)
+ *       responses:
+ *         200:
+ *           description: Successfully retrieved all chapter numbers
+ *           schema:
+ *             type: array
+ *             items:
+ *               type: integer
+ *               description: Chapter number
+ *         500:
+ *           description: Failed to load chapters
+ *           schema:
+ *             type: object
+ *             properties:
+ *               message:
+ *                 type: string
+ *               error:
+ *                 type: string
+ */
+
+router.get('/bible/:bibleId/:bookId/allchapters', (req, res) => {
+    try {
+        const { bibleId, bookId, chapter } = req.params;
+        const bibleJson = loadBibleJson(bibleId);
+        const book = bibleJson.bible[bookId - 1];
+        let chapters = []
+        for(let i = 1; i < book.chapters.length+1; i++){
+            chapters.push(i)
+        }
+        res.json(chapters)
+    } catch (error) {
+        res.status(500).json({ message: 'Failed to load chapter', error: error.message });
+    }
+})
+
+/**
+ * @swagger
+ * swagger: '2.0'
+ * info:
+ *   title: Bible API
+ *   description: API for retrieving Bible books, chapters, and verses
+ *   version: 1.0.0
+ * 
+ * basePath: /api
+ * 
+ * tags:
+ *   - name: Bible
+ *     description: Operations related to Bible books, chapters, and verses
+ * 
+ * paths:
  *   /api/bible/{bibleId}/{bookId}/{chapter}:
  *     get:
  *       tags:
  *         - Bible
- *       summary: Get a chapter from a book of the Bible
+ *       summary: Get a specific chapter from a book of the Bible
  *       description: Returns a specific chapter by its ID and its verses
  *       parameters:
  *         - name: bibleId
