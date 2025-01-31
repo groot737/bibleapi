@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Reader - Auto Select First Book</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bible.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Holy Bible Reader</h1>
+            <p>Explore the Scriptures with Ease</p>
+        </div>
+
+        <div class="controls">
+            <!-- Bible Translations Dropdown -->
+            <select id="translation">
+                <option value="">Select Bible</option>
+            </select>
+
+            <select id="book">
+                <option value="">Select Book</option>
+            </select>
+
+            <select id="chapter">
+                <option value="">Select Chapter</option>
+            </select>
+        </div>
+
+        <!-- Font size controls -->
+        <div class="font-size-controls">
+            <button id="decrease-font">-</button>
+            <button id="increase-font">+</button>
+        </div>
+
+        <!-- Bible text container -->
+        <div class="bible-text" id="content">
+            Select a Bible translation to begin.
+        </div>
+    </div>
+</body>
+<script src="bible.js"></script>
+</html>
