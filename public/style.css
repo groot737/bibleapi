@@ -193,3 +193,48 @@ footer a:hover {
   border-left: 4px solid #2a9d8f;
   padding-left: 15px;
 }
+.demo-button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.demo-button {
+  background: linear-gradient(135deg, #1d3557, #457b9d);
+  color: #f1faee;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.demo-button:hover {
+  background: linear-gradient(135deg, #457b9d, #1d3557);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.demo-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .demo-button {
+    padding: 10px 20px;
+    font-size: 0.9rem; 
+  }
+}
+
+@media (max-width: 480px) {
+  .demo-button {
+    padding: 8px 16px; 
+    font-size: 0.8rem; 
+    width: 100%; 
+    text-align: center;
+  }
+}
