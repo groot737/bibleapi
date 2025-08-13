@@ -4,44 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Reader - Auto Select First Book</title>
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#0f172a">
+    <title>Bible Reader</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="bible.css">
 </head>
 
 <body>
-    <div class="container">
+    <a href="#content" class="skip-link">Skip to main content</a>
+    <div class="container" role="main">
         <div class="header">
             <h1>Holy Bible Reader</h1>
             <p>Explore the Scriptures with Ease</p>
         </div>
 
-        <div class="controls">
+        <div class="controls" role="group" aria-label="Bible selection controls">
             <!-- Bible Translations Dropdown -->
-            <select id="translation">
+            <label for="translation" class="sr-only">Bible translation</label>
+            <select id="translation" aria-label="Bible translation" aria-controls="book chapter content">
                 <option value="">Select Bible</option>
             </select>
 
-            <select id="book">
+            <label for="book" class="sr-only">Book</label>
+            <select id="book" aria-label="Book" aria-controls="chapter content" disabled>
                 <option value="">Select Book</option>
             </select>
 
-            <select id="chapter">
+            <label for="chapter" class="sr-only">Chapter</label>
+            <select id="chapter" aria-label="Chapter" aria-controls="content" disabled>
                 <option value="">Select Chapter</option>
             </select>
         </div>
 
         <!-- Font size controls -->
-        <div class="font-size-controls">
-            <button id="decrease-font">-</button>
-            <button id="increase-font">+</button>
+        <div class="font-size-controls" aria-label="Text size controls">
+            <button id="decrease-font" type="button" aria-label="Decrease text size" title="Decrease text size">-</button>
+            <button id="increase-font" type="button" aria-label="Increase text size" title="Increase text size">+</button>
         </div>
 
         <!-- Bible text container -->
-        <div class="bible-text" id="content">
+        <div class="bible-text" id="content" role="region" aria-live="polite" aria-atomic="true" tabindex="-1">
             Select a Bible translation to begin.
         </div>
     </div>
+    <noscript>
+        JavaScript is required to use this app. Please enable JavaScript.
+    </noscript>
 </body>
 <script src="bible.js"></script>
 </html>
