@@ -26,12 +26,21 @@ const swaggerDefinition = {
 
 const options = {
     swaggerDefinition,
-    apis: ['./routes/api.js'],
+    apis: [path.join(__dirname, './routes/api.js')],
 };
 const swaggerSpec = swaggerJSDoc(options);
 
+const CSS_URL = "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui.min.css";
+const customSwaggerOptions = {
+    customCssUrl: CSS_URL,
+    customJs: [
+        "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui-bundle.min.js",
+        "https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/5.0.0/swagger-ui-standalone-preset.min.js"
+    ]
+};
+
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, customSwaggerOptions));
 app.use(express.json());
 app.use(cors());
 app.use('/api', apiRoute);
