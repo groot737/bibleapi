@@ -1,4 +1,4 @@
-const baseURL = "https://bibleapi-tgc1.onrender.com/";
+const baseURL = "/";
 const translations = document.getElementById('translation');
 const books = document.getElementById('book');
 const chapter = document.getElementById('chapter');
